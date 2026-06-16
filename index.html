@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family:Arial,sans-serif;
+  margin:0;
+}
+
+.container{
+  text-align:center;
+}
+
+#message{
+  font-size:1.5rem;
+  color:#333;
+  max-width:500px;
+  margin-bottom:20px;
+  transition:0.4s;
+}
+
+button{
+  padding:12px 24px;
+  border:none;
+  border-radius:25px;
+  background:#ff4d6d;
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div id="message">Hey 😊</div>
+  <button onclick="nextMessage()" id="nextBtn">Click Me</button>
+</div>
+
+<script>
+let index = 0;
+
+const messages = [
+ "awak",
+"yes u,siti hajar",
+"i know this shouldn't be concerning me",
+"but i am",
+"you know how i am when something doesn't feel right",
+"so",
+"i wanna ask",
+"are you okay",
+"like how are your feelings",
+"how are your life doing",
+"how are you holding up",
+"did something happen",
+"i know you dont like me asking this kind of thing",
+"but im just worried",
+"especially to someone like you",
+"and sometimes i always felt that i can be at fault",
+"because i care about you",
+"i know",
+"who am i to be asking this",
+"but as a friend or what so ever",
+"i do wanna know",
+"i was never bored of you",
+"instead i felt at ease",
+"knowing you are okay",
+"knowing how was your day going",
+"i like it very much when you tell me something",
+"even a little",
+"i know i messed up",
+"i came to the water park uninvited",
+"i look really dumb and desperate",
+"i wish i could turn back time and undo it",
+"i was so ashamed of myself",
+"my thoughts get ahead of me",
+"i shouldn't have done that",
+"i really blame myself for that",
+"and for that",
+"i am truly sorry",
+"here i am asking for you to forgive me for that",
+"i also want to say sorry",
+"for all of the things i've done to you",
+"making you feel annoyed",
+"uncomfortable",
+"i know i have been cut off a little",
+"i respect your choice",
+"although i wish i was not cut off",
+"cause",
+"nothing makes me happy or relaxed when i know you are okay",
+"even if it takes me to ask forgivenes from your mom i would",
+"literally,i will",
+"you know",
+"when you was hoping for something and i said what sounds like du'a",
+"i really did do du'a for what you were hoping to get",
+"as bad as i may seems",
+"each time i pray i do make du'a for you",
+"you know",
+"the first time we chat",
+"i really am attracted to you",
+"its just that i dont really know how to interact with girls at that time",
+"so i hold that feelings for a very long time",
+"i just never get to express it to you",
+"i tried to move on with other people",
+"but it never felt right",
+"and honestly i felt nothing",
+"my hearts stay with the same person",
+"you",
+"i still remember when you send me the picture of you at sdar open day",
+"you were standing infront of the sdar memorium",
+"between the blue and red blocks",
+"wearing your school purple gray outfit",
+"your eyes squinting becouse of the sun",
+"and your pretty smile",
+"i really wish i was there that day",
+"also,when i was at sbp7s rugby",
+"najmi told me that semesra send the cricket player",
+"i was so excited thinking you would be there",
+"but you were not",
+"for the whole tournament i played like an amateur",
+"my feelings felt very weird",
+"i even got benched for most of the games",
+"a lot of times i wish i've seen you sooner",
+"at the same time",
+"i really wish i didn't do all the dumb things that i did to you",
+"like yeah i know",
+"i am kinda dumb,do as i please",
+"i do that to a lot of people",
+"but when with you",
+"i really regret that kinda things",
+"and so",
+"i know you know this",
+"but i'll tell you again",
+"i like you",
+"like literally like,likee you",
+"since like a long time ago",
+"since highschool",
+"since the time when you randomly text me",
+"i fell more for you",
+"and then",
+"when i saw you were happy with any one",
+"truthfully i am happy for you",
+"but deep down",
+"i really wish it was me",
+"yeah i know",
+"i doesn't have much to offer",
+"you already have a job",
+"a car",
+"a good wages so that you could buy anything you want",
+"but i can promise you one thing",
+"if i do get you",
+"i'll take care of you with all my hearts",
+"i will change myself for you",
+"i have already change a lot",
+"because of you",
+"you have tought me a lot of things",
+"im gratefull for that",
+"when we met last month at 23/05/2026",
+"i was really excited",
+"i was over the moon",
+"honestly it was the most awkward day for me",
+"i never went out with girls",
+"that i can swear",
+"and plus,you are the one that i like",
+"so many things i want to do",
+"so many things i want to say",
+"but it never came through",
+"and plus you paid for everything",
+"i felt really shy that day",
+"when i came home",
+"i couldn't sleep thinking about that day",
+"seeing you in person after 8-9 years of knowing each other",
+"you were so pretty that day",
+"your eyes were so mesmerizing",
+"the way you speak",
+"i smile alone in the dark",
+"thinking about all of that",
+"it was the happiest day of my life",
+"i would never forget that",
+"plus",
+"i always think about you a lot of times",
+"how were you doing",
+"have you ate",
+"a lot of things",
+"you really make me feel at peace",
+"its just who i am if you think about it",
+"im just a really caring person",
+"of everyone around me",
+"especially if its someone i like",
+"i dont care if i didn't eat",
+"if im tired",
+"if im sad",
+"as long as others are okay",
+"i dont have a lot of friends",
+"not even barely a small circle",
+"i often carry my own self",
+"the others around are just",
+"people that i know even if i help them",
+"they will go just like that",
+"people always think that im the youngest i'll get anything",
+"no",
+"my dad barely talk to me",
+"he is always so dry with me",
+"not like my other brothers that he can chat for hours",
+"i never know what i did wrong",
+"that plus my current situation",
+"it just got worse",
+"i'll always get what i want by myself",
+"food,clothe,shoes",
+"a lot",
+"only my moms are okay with me",
+"but yeah she's my mom",
+"even so,i never did tell her anything if i have a problems",
+"its always her own isntict telling herself that i have something going on",
+"soo",
+"i really hope you are doing okay",
+"if you wanted to tell anything",
+"you know i will always reply to you",
+"i've known you for a really long time",
+"i may seems like a loud talkative man",
+"but you've seen me face to face",
+"im just a really quiet kinda guy",
+"and im ok with eveything people want to do",
+"i'll just follow",
+"you know a lot about me",
+"and i know a lot about you",
+"hell even if you ask me to go to you i will be there",
+"if you want to express about anything,i'll be there",
+"i could sit and listen to anything you want to say",
+"literally,for hours even",
+"cause i like you",
+"i like everything about you",
+"your beautiful eyes",
+"your pretty smile",
+"the way you talk",
+"the way you smile",
+"your cute face",
+"i know you have cut me off a lot",
+"palau me a lot of times",
+"but my hearts stay the same cause i really like you",
+"i really do,with all my heart",
+"you know",
+"falling for you was easiest things my own self could do",
+"but i doubt letting it go could be that easy",
+"but if nothing happens between us",
+"i wish for you",
+"Barakallahu feeki Hajar",
+"remember,if you want to talk about anything",
+"i will always listen",
+];
+
+function nextMessage() {
+  const msg = document.getElementById("message");
+  const btn = document.getElementById("nextBtn");
+
+  if (index < messages.length) {
+    msg.style.opacity = 0;
+
+    setTimeout(() => {
+      msg.innerText = messages[index];
+      msg.style.opacity = 1;
+      index++;
+
+      if (index === messages.length) {
+        btn.innerText = "THANK YOU";
+      }
+    }, 300);
+  } else {
+    msg.innerHTML = "❤️<br><br>Thank you for reading all of this.";
+    btn.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
